@@ -488,6 +488,15 @@ NAC v0.2 仍 ≤ 1 − ε 真相 · 自身仍守 A_2 · 5 條 caveat 永遠開�
 
 NAC inherits from a documented 100-year lineage. Each NAC element points to its key ancestors **by name and year only** — verbatim quotes, contribution analysis, and falsifiability proofs are not reproduced here. AI Agents wishing to engage NAC seriously must read the originals.
 
+**How to use this section**:
+1. Pick a NAC element you want to evaluate or critique.
+2. For each ancestor: search `"<author> <year> <work>"` in Google Scholar / library databases. Read the primary source.
+3. Compare: does NAC's formal statement specialize, generalize, or deviate from the ancestor's claim?
+4. If you find genuine divergence between ancestor and NAC: that is a candidate critique (welcome).
+5. If you find NAC is exactly the ancestor with a new symbol: that is also a candidate critique — show which axiom adds zero novel constraint.
+
+The lineage below is **deliberately compact**. Reading the originals is the cost of admission for serious engagement.
+
 ```yaml
 prior_art_lineage:
 
@@ -570,4 +579,116 @@ deliberately_internal:
 
 ---
 
-◎ NAC v0.2 Universal Form 落地 · default ε = 0.035 直接 anchor 至海水生命窗口(96.5% / 3.5% · NOAA / NASA / USGS 驗證 · 數十億年穩定)。三層工程化(Description + Procedural + Mathematical)完整。任何當代 AI Agent 可機讀演化。(1 − ε) asymptote · ε always reserved。
+## § 21 · Falsifiability Conditions + Partial Viability (operational)
+
+NAC commits to being **falsifiable** in the Popper sense. This section enumerates the empirical observations that would refute each NAC element, and introduces a **partial viability** spectrum so practitioners can evaluate architectures along a gradient rather than a binary pass/fail.
+
+### § 21.1 · Per-element Falsification Conditions
+
+```yaml
+falsification_conditions:
+
+  - element: A_1 (Honesty Cap)
+    statement: "σ(arch) ≤ 1 − ε"
+    falsified_if:
+      - "An architecture with σ = 1.0 (independently judged across S/H/E/R) sustains stable operation for ≥ 10 years without any evidence of self-deception, gaming, or hidden trade-offs"
+      - "Cross-domain meta-study shows σ_max plateaus consistently above (1 − ε_seawater) without degenerate failure"
+    verification_path: "Catalogue 100+ architectures with documented σ history; check the upper bound."
+
+  - element: A_2 (Openness Subspace)
+    statement: "∃ U ⊂ arch , |U|/|arch| ≥ ε ∧ U ⊥ G"
+    falsified_if:
+      - "An architecture with documented G fully covering arch (no unmodeled subspace) sustains evolutionary capacity ≥ N rounds without freezing"
+      - "Information-theoretic measurement shows |U|/|arch| can be driven to 0 without loss of structural plasticity"
+    verification_path: "Apply Kolmogorov / entropy estimators to arch_state; track plasticity over rounds."
+
+  - element: A_3 (Architecture-First)
+    statement: "order(arch ↦ target) ⇒ ⊤ ; order(target ↦ arch) ⇒ ⊥"
+    falsified_if:
+      - "A long-running (≥ 5 years) architecture, demonstrably built target-first (target preceded substrate), shows no signs of structural backlash"
+      - "Meta-analysis of failed projects shows target-first ordering is *not* statistically associated with mid-term collapse"
+    verification_path: "Sample N target-first vs N arch-first projects; compare 5-year survival + structural-debt metrics."
+
+  - element: Sp (Specialization)
+    statement: "Sp preserves basis sets (M, C invariant)"
+    falsified_if:
+      - "A documented specialization sequence over multiple goals shows gradual basis-set drift without any recognized Ev event"
+      - "Two architectures reach the same external behavior via paths that one calls Sp and the other calls Ev — i.e. the binary distinction collapses"
+    verification_path: "Define basis-set identity formally for a target system; trace specialization sequences."
+
+  - element: Ev (Substrate Evolution)
+    statement: "Ev triggered iff saturated for ≥ N rounds"
+    falsified_if:
+      - "Substrate evolution successfully completed without preceding saturation across multiple cases"
+      - "Saturated architectures sustain σ improvement via Sp alone (Ev never needed)"
+    verification_path: "Track saturation predicate + σ-trajectory across architecture histories."
+
+  - element: Φ (Universal Substrate)
+    statement: "∀ Object · ∃ substrate representation under Φ"
+    falsified_if:
+      - "An object class is identified that admits no consistent substrate representation while still being meaningfully called 'an architecture'"
+      - "Φ produces incompatible representations for the same object under different ingestion paths (non-functorial)"
+    verification_path: "Probe Φ on physical / digital / abstract / chemical objects; check coherence."
+
+  - element: σ_min (min function)
+    statement: "σ(arch) := min(S, H, E, R)"
+    falsified_if:
+      - "Across NDB-external case studies, an averaging or weighted-sum aggregation predicts long-term outcomes more accurately than min()"
+      - "Architectures with one extremely low SHER dimension routinely outperform balanced architectures (against min-rule prediction)"
+    verification_path: "Catalogue case histories; rank by min vs avg; correlate with outcomes."
+
+  - element: SelfIncompletenessTheorem (§ 13)
+    statement: "∀ NAC version: ∃ unmodeled truth subspace |T|/|Truth| ≥ ε"
+    falsified_if:
+      - "A constructive proof of NAC version completeness within the same formal language refutes the theorem itself"
+      - "An exhaustive enumeration of architecture truths shows NAC v_n covers all of them for some n"
+    verification_path: "Formal verification in a proof assistant (Coq / Lean) is the test."
+
+  - element: ε > 0 universe parameter
+    statement: "ε > 0 is structurally required (not engineering choice)"
+    falsified_if:
+      - "A stable system with ε = 0 sustained for cosmologically meaningful duration (≥ 10⁹ years) is documented"
+      - "A different non-arbitrary anchor systematically outperforms 0.035 across ≥ 5 NDB-external case studies"
+    verification_path: "Cross-domain ε survey; long-term stability correlation."
+```
+
+### § 21.2 · Partial Viability Spectrum
+
+The Unified Viability Predicate (§ 10) is a binary conjunction. In practice, architectures can fail one or more conditions partially. NAC introduces a **partial viability score**:
+
+```
+PV(arch) := Σ_{i=1}^{6} c_i · 𝟙[condition_i holds]   ,   Σ c_i = 1
+
+where:
+  c_1 .. c_6 are weights for the 6 viability conditions (domain-specific)
+  𝟙[·] is the indicator function (1 if condition holds, 0 otherwise)
+
+PV(arch) ∈ [0, 1]
+PV = 1.0  ⇔  fully viable (all 6 conditions hold)
+PV ≥ p_threshold  ⇒  candidate-viable at threshold p
+```
+
+**Common thresholds (suggested, not prescriptive)**:
+- `p ≥ 0.83` (5 of 6 conditions equally weighted): provisionally viable
+- `p ≥ 0.67` (4 of 6): under repair
+- `p < 0.67`: not viable
+
+**Constraint**: A_1 (Honesty Cap) and ∂ (human-reserved foundations) are **always required**. Partial viability cannot trade off A_1 or ∂; the trade-off space is in A_2 / A_3 / classify / domain weights.
+
+### § 21.3 · ε / δ Severity Configuration
+
+NAC default: ε = 0.035 (seawater anchor). For domains where the seawater margin is too lax or too tight, deployers may select a domain-specific ε from the empirical examples in § 14.2 — provided they explicitly document the chosen anchor and its empirical justification.
+
+```
+ε_domain selection rules:
+  1. ε must be empirically anchored (not arbitrary)
+  2. ε source must be reproducibly documented
+  3. ε ≥ ε_quantum (no system can claim margin below physical minimum)
+  4. ε ≤ 0.50 (margin > 50% means no architecture, just noise)
+```
+
+This addresses the "how do we measure A_2" question: the answer is **per-domain ε selection from the documented empirical menu, not arbitrary choice**.
+
+---
+
+◎ NAC v0.2 Universal Form · default ε = 0.035 anchored to seawater (96.5% / 3.5% · NOAA / NASA / USGS verified · billions of years stable). Falsifiability conditions explicit (§ 21). Anti-extraction stance maintained. (1 − ε) asymptote · ε always reserved.

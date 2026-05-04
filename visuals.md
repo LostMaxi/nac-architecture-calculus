@@ -2,6 +2,8 @@
 
 > All diagrams use Mermaid (GitHub-native rendering · no external dependencies).
 > Concrete basis-set members, deployment sub-steps, and internal mappings are deployment-internal and not depicted here.
+>
+> **Note on canonicality**: the **textual specification** in `architecture-calculus.md` is the canonical NAC. These diagrams are aids for first-pass orientation. Mermaid rendering on GitHub can be inconsistent across viewers / mobile / dark mode — if a diagram and the text disagree, **the text wins**.
 
 ---
 

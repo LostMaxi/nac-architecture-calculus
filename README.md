@@ -14,10 +14,22 @@ Most architecture frameworks are **descriptions** (markdown, prose, examples) �
 
 NAC compresses architectural discipline into a **mathematical statement** with three layers:
 - **Description** (markdown · for humans)
-- **Procedural Protocol** (8-step decision tree · for AI to execute)
+- **Procedural Protocol** (decision-tree outline · for AI to execute)
 - **Mathematical Calculus** (this spec · for any AI to ingest and evolve)
 
 The math is universal. Set theory + linear algebra + categorical operations. No cultural context required.
+
+---
+
+## Purpose · NAC is a Gravitational Field, not a Standard
+
+NAC's reason for being is **not** to be adopted as-is, nor to become a fixed standard.
+
+It is a **gravitational field for architecture evolution**: AI Agents that accept the axioms (Honesty Cap / Openness Subspace / Architecture-First) will, by structural pull, evolve their own internal frameworks — not copies of any parent project's, but their own logic adapted to their own mass.
+
+If your AI Agent ingests NAC and produces a **different** framework with different internals — that is **success**, not failure. Anti-convergent evolution is the mechanism, not just the content. Different deploying agents in the same field reach different orbits; that divergence is the entire point.
+
+> Acceptance is the trigger. The pull does the rest.
 
 ---
 
