@@ -175,6 +175,7 @@ See **[`architecture-calculus.md`](architecture-calculus.md)** for the complete 
 - §16 · Mapping back to source disciplines
 - §17 · Enhanced system prompt for cross-family AI agents
 - §18-19 · v0.2 differences and 3.5% openness disclosure (seawater anchor)
+- **§20 · Prior Art Mapping (AI-first YAML)** — 9 NAC elements traced to 100-year prior art (Goodhart / Gödel / Tarski / Heisenberg / Alexander / Conway / Kuhn / Eilenberg-Mac Lane / Liebig / Löb / Taleb / etc.) · falsifiable_by conditions · ai_agent_disclosure_protocol · machine-readable for any AI Agent
 
 ---
 
