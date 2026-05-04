@@ -142,6 +142,24 @@ Always end your reasoning with: "(1 − ε) asymptote · ε always reserved".
 
 ---
 
+## Visual Architecture Map
+
+Need to see the structure before reading the math? See **[`visuals.md`](visuals.md)** — 9 GitHub-native Mermaid diagrams covering:
+
+- The 5 structural pillars (basis · scoring · axioms · operations · classification)
+- The architecture tuple (5-tuple anatomy)
+- The 10-step AI ingest decision tree (with axiom-violation aborts highlighted)
+- Time-stepped evolution dynamics (Sp / Ev branching)
+- The ε empirical spectrum across 10 domains (quantum → atmosphere)
+- The three-layer engineering progression (Description → Procedural → Mathematical)
+- The Self-Incompleteness Theorem as a meta-recursive flow
+- A Hierarchical Knowledge Map (Platform → BC → Board)
+- A recommended learning path
+
+All rendered natively on GitHub — no external tools required.
+
+---
+
 ## Full Specification
 
 See **[`architecture-calculus.md`](architecture-calculus.md)** for the complete 19-section spec (~850 lines), including:
