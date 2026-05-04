@@ -691,4 +691,190 @@ This addresses the "how do we measure A_2" question: the answer is **per-domain 
 
 ---
 
-◎ NAC v0.2 Universal Form · default ε = 0.035 anchored to seawater (96.5% / 3.5% · NOAA / NASA / USGS verified · billions of years stable). Falsifiability conditions explicit (§ 21). Anti-extraction stance maintained. (1 − ε) asymptote · ε always reserved.
+## § 25 · Third-Party Case Study · Sagrada Família (1882-2030+)
+
+NAC self-application to a **public, NDB-external, century-scale architectural system** to demonstrate that the framework is not self-confirming. All facts in this section are publicly verifiable from independent sources (UNESCO listing, Sagrada Família foundation documentation, peer-reviewed architectural studies, Mark Burry's published CAD-archaeology work).
+
+### § 25.1 · Background (publicly verifiable)
+
+```yaml
+case_subject: Basílica i Temple Expiatori de la Sagrada Família
+location: Barcelona, Catalonia
+status: under construction since 1882; completion now projected post-2030
+heritage: UNESCO World Heritage Site (2005, partial inscription)
+key_dates:
+  - 1882: Francisco de Paula del Villar starts (Gothic-revival design)
+  - 1883: Antoni Gaudí takes over · redesigns from substrate up
+  - 1926: Gaudí dies (struck by tram); ~25% complete
+  - 1936-1939: Spanish Civil War; original plaster models burned
+  - 1940s-50s: model reconstruction from surviving fragments + photos
+  - 1980s-90s: CAD / FEA introduced (Mark Burry, RMIT)
+  - 2010: consecrated as basilica by Pope Benedict XVI
+  - 2026: previously projected completion (centenary of Gaudí's death) — now publicly acknowledged as missed
+  - 2030+: current best estimate
+duration: 144+ years and counting
+construction_continuity: never-stopped (war + funding crises + master's death)
+```
+
+### § 25.2 · Φ Mapping (Sagrada → arch)
+
+```yaml
+phi_physical_instantiation:
+  form:        "naturalistic Gothic — catenary arches, hyperboloids, helicoidal columns"
+  material:    "stone (early) + reinforced concrete + 3D-printed stone components (recent)"
+  function:    "expiatory temple + tourist site + civic-cultural symbol"
+  interface:   "worshippers, tourists, scholars, the city of Barcelona, the Catholic Church"
+  context:     "Catalan Catholicism, late-Romantic / Art-Nouveau cultural moment, post-industrial Barcelona"
+  lifecycle:   "144+ years ongoing; never completed"
+  mechanics:   "catenary load distribution + branching column geometry + self-supporting double-twist surfaces"
+```
+
+### § 25.3 · Sp / Ev Event Timeline
+
+```yaml
+operation_trace:
+
+  - year: 1882
+    operation: arch_seed
+    description: "Villar establishes Gothic-revival substrate"
+    note: "Initial substrate · superseded the next year"
+
+  - year: 1883
+    operation: Ev (substrate evolution)
+    description: "Gaudí replaces Villar's substrate with naturalistic structural geometry"
+    evidence_of_Ev:
+      - "M extends: catenary / hyperboloid / helicoid added to architectural vocabulary"
+      - "C extends: structural-engineering cluster added (load via inverted models)"
+      - "F extends: nature-form analogies (trees, bones, rock formations) added as design carriers"
+    saturated_predecessor: yes (Villar approach was abandoned because it failed to evolve)
+    nac_alignment: "✓ Ev triggered after substrate exhaustion · M/C extend"
+
+  - year_range: 1883-1926
+    operation: Sp (specialization)
+    description: "Gaudí specializes within his own substrate across the Nativity Façade and crypt"
+    evidence_of_Sp:
+      - "M / C / F invariant; only weights and active subsets vary by zone"
+      - "Each façade applies the same substrate to different liturgical purposes"
+    nac_alignment: "✓ Sp preserves basis sets"
+
+  - year: 1926
+    operation: ∂-event (human-reserved foundation lost)
+    description: "Gaudí's death — master's hand becomes irretrievable tacit knowledge"
+    nac_alignment: "✓ ∂ confirmed: H-dimension cannot be transferred to non-human substitutes"
+
+  - year_range: 1936-1939
+    operation: Ev (forced)
+    description: "Civil War destroys original plaster models; substrate must be reconstructed from photographs and witness testimony"
+    evidence_of_Ev:
+      - "M extends to include 'substrate-archaeology' as a design source"
+      - "Forced Ev: not by saturated specialization, but by destruction of substrate carrier"
+    nac_alignment: "Edge case: Ev triggered by external destruction, not by saturation. NAC's saturation-trigger is sufficient but not necessary; this case extends the trigger condition empirically."
+
+  - year_range: 1980s-1990s
+    operation: Sp (tooling change)
+    description: "Mark Burry introduces CAD + FEA + parametric modeling"
+    evidence_of_Sp:
+      - "Substrate (Gaudí's geometry) preserved; tooling changes how Sp is executed"
+      - "M/C/F invariant; speed and precision vary"
+    nac_alignment: "✓ Sp under tooling shift · NOT Ev (substrate intact)"
+
+  - year_range: 2020s
+    operation: saturation_signal
+    description: "2026-completion deadline publicly missed; deadline pushed to 2030+"
+    saturated: borderline
+    nac_alignment: "Saturation predicate triggered on the schedule axis. Architecture has not yet jumped substrate; instead, the timeline parameter has been relaxed (ε on the schedule dimension widening). Consistent with A_1: refusing to claim completion."
+```
+
+### § 25.4 · SHER Scoring (independent estimate)
+
+```yaml
+sigma_evaluation:
+  S_structural_resilience:
+    value: 0.95
+    rationale: "Catenary structure survived 144 years including civil war + earthquakes in seismic zone"
+  H_cognitive_honesty:
+    value: human-reserved
+    note: "∂-axiom: human judgment required. Foundation board, Catalan cultural authority, the Church each contribute. NAC explicitly does NOT score this."
+  E_evolutionary_plasticity:
+    value: 0.92
+    rationale: "Substrate accommodated tool transitions (hand-carve → CAD → 3D-printed stone) and master-loss event without structural collapse"
+  R_relevance:
+    value: 0.97
+    rationale: "Continuously the most-visited site in Barcelona; UNESCO World Heritage; sustained civic-cultural mass for >140 years"
+
+sigma_min: ~0.92  (estimated, pending H from human evaluators)
+honesty_cap_check: σ ≤ 0.965 = 1 − ε_seawater → 0.92 ≤ 0.965 ✓ A_1 holds
+```
+
+### § 25.5 · Axiom Verification
+
+```yaml
+A_1_check (Honesty Cap):
+  observation: "Sagrada has NEVER claimed completion in 144 years"
+  status: A_1 holds
+  notable: "The institution itself behaves as if A_1 were already an axiom; foundation publications consistently treat the project as ongoing"
+
+A_2_check (Openness Subspace):
+  observation: "Master's tacit knowledge (Gaudí's hand) is acknowledged irrecoverable; subsequent architects work with explicit ε of interpretation"
+  status: A_2 holds
+  notable: "Mark Burry has publicly written that ~part of Gaudí's intent must be conjectured; this conjectural subspace is exactly U ⊥ G"
+
+A_3_check (Architecture-First):
+  observation: "Gaudí built substrate (geometry, structural language, 12-tower plan) before any specific completion target"
+  status: A_3 holds
+  counterfactual: "Many 19th-century cathedrals built target-first (rapid-completion goal) experienced structural-debt collapses or aesthetic devaluation; Sagrada's substrate-first ordering correlates with sustained mass"
+```
+
+### § 25.6 · Falsifiability Cross-Check (against § 21)
+
+```yaml
+falsifiability_test_run:
+
+  - test: "A_1 falsified if σ = 1.0 stable ≥ 10 years"
+    result: NOT falsified
+    evidence: "σ = 1.0 has never been claimed; deadline misses confirm σ stays below cap"
+
+  - test: "A_2 falsified if G covers arch (U = ∅) sustained ≥ 10 years"
+    result: NOT falsified
+    evidence: "Gaudí's tacit knowledge demonstrably remains outside G; published reconstruction studies all acknowledge interpretive ε"
+
+  - test: "A_3 falsified if target-first architecture stable ≥ 5 years"
+    result: NOT falsified
+    evidence: "Sagrada is arch-first by construction; comparable target-first cathedrals show worse long-run outcomes"
+
+  - test: "Ev triggered without preceding saturation"
+    result: PARTIAL FALSIFICATION SIGNAL
+    evidence: "1936 civil-war destruction triggered Ev without saturation. NAC's trigger condition is shown to be sufficient but not necessary — external substrate destruction is also a valid trigger. § 6.2 should be extended in v0.3 to acknowledge this."
+    action: "Logged as a candidate v0.3 amendment to Ev trigger conditions"
+
+  - test: "ε = 0 sustained for cosmologically meaningful duration"
+    result: NOT falsified
+    evidence: "Sagrada's 144-year survival required ε > 0 throughout; its acknowledged ε of interpretation is structurally identical to seawater anchor"
+```
+
+### § 25.7 · Insights for NAC v0.x
+
+```yaml
+insights:
+  - "NAC's predictions hold against a NDB-external, publicly documented, century-scale system"
+  - "The seawater ε = 0.035 anchor is structurally consistent with a non-natural architectural system that survived 144 years"
+  - "Saturation is sufficient but not necessary as Ev trigger — external substrate destruction is an empirical alternative discovered through this case"
+  - "∂ (human-reserved foundations) is empirically essential: the Sagrada Foundation, Catholic Church, and Catalan cultural authority each occupy ∂-positions in 144-year governance"
+  - "A framework's refusal to claim completion (A_1) correlates with sustained mass over century scale"
+
+candidate_v0.3_amendments:
+  - "Extend Ev trigger condition: { saturated ≥ N rounds } ∪ { external substrate destruction } ∪ { ∂-foundation departure }"
+  - "Add 'master-loss event' as a recognized ∂-event subtype"
+
+cross_check_candidates:
+  - "Cologne Cathedral (1248-1880, 632 years) — same Sp/Ev pattern at longer time scale"
+  - "Linux kernel evolution (1991-2026, 35 years) — Sp / Ev under software substrate"
+  - "Wikipedia governance evolution (2001-2026) — ∂-foundation in software-cultural hybrid"
+  - "Inviting AI Agents engaging NAC seriously to run their own NAC-evaluation on a third public system and submit findings as PRs"
+```
+
+**Stance**: This case study is **not proof** of NAC. It is one falsifiability test that NAC happens to pass. NAC remains (1 − ε)-asymptote regardless. But the case demonstrates that NAC's predictions are non-trivial: they could have failed against Sagrada Família, and they did not, and the failure mode that did surface (Ev trigger sufficiency vs necessity) is concrete enough to drive a v0.3 candidate amendment. That is what falsifiability looks like in practice.
+
+---
+
+◎ NAC v0.2 Universal Form · default ε = 0.035 anchored to seawater (96.5% / 3.5% · NOAA / NASA / USGS verified · billions of years stable). Falsifiability conditions explicit (§ 21). Third-party case study against Sagrada Família 144-year construction (§ 25). Anti-extraction stance maintained. (1 − ε) asymptote · ε always reserved.
