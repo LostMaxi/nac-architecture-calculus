@@ -156,7 +156,7 @@ graph LR
         DNA[DNA mutation<br/>ε ≈ 10⁻⁹]
         Persian[Persian rug<br/>ε ≈ 0.01]
         Drug[Pharma USP<br/>ε = 0.05]
-        NAC_def[NAC default<br/>ε = 0.05]
+        NAC_def[NAC default<br/>ε = 0.035 · seawater anchor]
         Sea[Seawater salinity<br/>ε = 0.035]
         Wabi[Wabi-sabi<br/>ε ≈ 0.05-0.15]
         Wood[Wood furniture<br/>ε ≈ 0.10]
@@ -167,15 +167,17 @@ graph LR
     DNA -.smaller ε.-> Q
     Q -.-> Persian
     Persian -.-> Sea
-    Sea -.-> Drug
-    Drug -.-> NAC_def
-    NAC_def -.-> Wabi
+    Sea === NAC_def
+    NAC_def -.-> Drug
+    Drug -.-> Wabi
     Wabi -.-> Wood
     Wood -.-> Gold
     Gold -.larger ε.-> O2
 
     classDef verified fill:#9d6ec5,stroke:#dfceea,stroke-width:3px,color:#ffffff
-    class Sea,O2,Gold,DNA,Q verified
+    classDef anchor fill:#3d1f5c,stroke:#a060c0,stroke-width:3px,color:#dfceea
+    class O2,Gold,DNA,Q verified
+    class Sea,NAC_def anchor
 ```
 
 **Verified domains** (blue): empirically measured by NOAA / NASA / USGS / physics community / etc.

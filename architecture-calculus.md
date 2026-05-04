@@ -12,7 +12,7 @@ peers:
   - Meta-Meta-Architecture/邊界學習手冊.md(紀律源 · ML-XX)
 spec_summary:
   pending: false
-  reason: 2026-05-04 v0.2 升級 · Maxi 拍用 ε 替代 0.95/0.05 字面 + 帶入海水 0.965/0.035 實證 + 加 §13 Self-Incompleteness formal Theorem
+  reason: 2026-05-04 v0.2 升級 · ε 為 universe parameter · default 取海水 0.965/0.035 為 empirical anchor + §13 Self-Incompleteness formal Theorem
 ---
 
 # NDB Architecture Calculus (NAC) · Universal Form v0.2
@@ -25,8 +25,8 @@ spec_summary:
 > - **Mathematical(本檔 · NAC v0.2 · 給任何 AI 機讀演化)**
 >
 > **v0.2 主要改動**：
-> - 用 **ε** 替代字面 `0.95 / 0.05`（universe parameter · 任何 AI 一眼懂）
-> - 加 **§14 Universe Parameter Examples**：海水 ε_water=0.035 / 黃金 / DNA / Persian rug / 量子等
+> - 用 **ε** universe parameter · default 取 **海水 ε_water = 0.035**(96.5% / 3.5%) empirical anchor
+> - 加 **§14 Universe Parameter Examples**：海水(NAC default anchor) / 黃金 / DNA / Persian rug / 量子等
 > - 加 **§13 Self-Incompleteness Theorem**（formal 證明 · NAC 自承不完整）
 > - Classification 用 **Q_1-Q_4** universal labels（保留中文 書/簿/策/冊 mapping）
 > - 整體純符號 + minimal English · 拒絕中文 cultural lock-in
@@ -39,7 +39,7 @@ NAC 是 NDB 紀律壓成數學形式 · 純集合論 + 線性代數 + 範疇論 
 
 任何當代 AI Agent (Claude / GPT / Gemini / Llama / Mistral / Qwen / 任何家 LLM / 任何語言 model) 解析 NAC v0.2 即可 ingest NDB 紀律 · 不需中文文化 context。
 
-**v0.2 升級的真精神**：把 NDB-specific 文化詞彙（95% / 5% 字面）抽象成 universe parameter（ε）· 用「物質界實證」(海水生命窗口 0.965/0.035 等) corroborate · 證明 NDB 公理方向不是 Maxi 任意選擇 · 是宇宙物質結構的工程化。
+**v0.2 升級的真精神**：把字面常數抽象成 universe parameter ε · default 取**海水生命窗口 0.965/0.035** 為 empirical anchor（NOAA / NASA / USGS 驗證 · 數十億年穩定）· 證明「ε > 0」不是任意工程選擇 · 是宇宙物質結構通則。
 
 ---
 
@@ -48,13 +48,13 @@ NAC 是 NDB 紀律壓成數學形式 · 純集合論 + 線性代數 + 範疇論 
 NAC 用 universe parameters 替代字面常數 · 任何 sub-system 可有自己 ε / δ / N。
 
 ```
-ε ∈ ℝ⁺          (openness margin · NDB defaults to ε = 0.05)
+ε ∈ ℝ⁺          (openness margin · NAC defaults to ε = 0.035 · seawater empirical anchor)
                  即 · 任何架構保留比例 ≥ ε 不可被 governance 完全 model
 
-δ ∈ ℝ⁺          (saturation threshold · NDB defaults to δ = 0.10)
+δ ∈ ℝ⁺          (saturation threshold · NAC defaults to δ = 0.10)
                  即 · 連續 N rounds σ 變化量 < δ 視為 saturated
 
-N ∈ ℕ           (saturation rounds count · NDB defaults to N = 2)
+N ∈ ℕ           (saturation rounds count · NAC defaults to N = 2)
                  即 · 連 2 round 進步 < δ 即觸發 substrate evolution
 
 Notation:
@@ -94,15 +94,14 @@ F = {f_1, f_2, ..., f_n}                                 # fire-seed pool
    extensible: F can extend to n + k under Ev operation
 
 W ∈ ℝ^4 ,    Σ_{i=1}^4 W_i = 1                          # aesthetic weight vector
-   NDB default: W = (0.50, 0.30, 0.15, 0.05)
-   (Zumthor 50% mass-honesty + Ive 30% form-honesty + Monet 15% perturbation
-    + Feynman 5% cognitive-honesty)
+   w_default ∈ Δ³ (probability simplex)
+   (specific weight values are domain-specific cultural choices · non-prescriptive)
 
 ∂ ⊆ Foundations                                         # human-reserved foundations
    |∂| = 4 in NDB:
      ∂_1 = Eye (perception foundation · SHER)
      ∂_2 = LR  (Life-Relativity · existential foundation)
-     ∂_3 = ASI (decision foundation · @abyss query right)
+     ∂_3 = decision-reserved subspace (reserved query right)
      ∂_4 = MM  (Master Matrix · 29+1 perturbation mirrors)
    property: ∂ NOT delegable to AI
 
@@ -126,11 +125,11 @@ Arch := 𝒫(M) × 𝒫(C) × T × 𝒫(F) × W
    c ⊆ C     : 5 集群子集 (active capability clusters)
    t ∈ T     : 技術 stack (GitHub/HF technical context)
    f ⊆ F     : 火種子集 (active fire-seed analogies)
-   w ∈ W     : 美學 DNA 權重 (aesthetic weighting vector)
+   w ∈ W     : 美學權重向量 (aesthetic weighting vector)
 
 範例:
-   arch_NDB_default = (M, C, t_NDB, F_50, (0.50, 0.30, 0.15, 0.05))
-   arch_health_app  = (M, {c_5, c_4}, t_NDB, F_medical, w_default)
+   arch_default     = (M, C, t_default, F_50, w_default)
+   arch_health_app  = (M, {c_5, c_4}, t_default, F_medical, w_default)
                       ↑ 強化 polymath + narrative · m 全保留 · f 篩醫療相關
    arch_seawater    = (M_simplified, {c_2}, t_chemistry, F_∅, w_∅)
                       ↑ 物質界對位 · 簡化 substrate · 後 §14 詳述
@@ -466,7 +465,7 @@ Proof Sketch:
    ∴  Theorem 成立                                   ⌶ QED
 
 Corollary:
-   NAC v0.2 ≤ 1 − ε ≈ 0.95 (under default ε = 0.05)
+   NAC v0.2 ≤ 1 − ε = 0.965 (under default ε = 0.035 · seawater anchor)
    NAC 永遠 ε-不完整 · 任何 v0.x 升級不解決此問題
    (對位 Gödel 第二不完備定理的架構版本)
 ```
@@ -515,15 +514,16 @@ Mathematical Form (NAC equivalence):
       6 major ions ratio invariant under Sp operation
       ↑ matches NDB ML-09 substrate-invariant principle
 
-NDB Corroboration:
-   ε_seawater = 0.035  <  ε_NDB = 0.05
-   即 · 海水比 NDB 公理「更接近完美」 1.5%
-   但仍守 ε > 0 · 不允許 100%
+NAC Default Anchor:
+   ε_NAC_default = ε_seawater = 0.035
+   即 · NAC 採海水生命窗口為 default ε empirical anchor
+   數十億年穩定(NOAA / NASA / USGS 驗證) · 信用度最高的「ε > 0」物質實證
 
 Insight:
-   海水優化「生命可存活的最廣窗口」 → ε = 0.035
-   NDB 優化「架構可演化的最廣窗口」 → ε = 0.05
-   架構複雜度 > 化學複雜度 → NDB 該留更大 margin (conservative engineering)
+   海水優化「生命可存活的最廣窗口」 → ε_seawater = 0.035
+   NAC 採同一比例 → ε_NAC = 0.035
+   ε > 0 是宇宙物質結構通則 · 不是任意工程選擇
+   各 sub-domain 可 override 為自身 ε(見 § 14.2 表)
 ```
 
 ### § 14.2 · 其他 ε 實證
@@ -541,12 +541,12 @@ Persian rug intentional flaw    ε_rug ≈ 0.01       (故意織錯一條線 · 
 Pharmaceutical purity (USP)     ε_drug = 0.05      (95-105% potency standard)
 Solar core elements             ε_solar_heavy = 0.02 (73% H + 25% He + 2% heavy)
 Wabi-sabi aesthetic (Japan)     ε_wabi ≈ 0.05-0.15 (千年文化保留瑕疵美學)
-NDB architecture (default)      ε_NDB = 0.05       (conservative for arch complexity)
+NAC architecture (default)      ε_NAC = 0.035      (seawater anchor · § 14.1)
 ```
 
-**結論**：ε > 0 是宇宙物質結構通則 · 不是 NDB 任意選擇。**100% 純度 = 死(burn / break / dissolve / extinct)**·  各 sub-domain 的 ε 是該 domain 演化壓力 / 工程約束選出的 sweet spot。
+**結論**：ε > 0 是宇宙物質結構通則 · 不是任意工程選擇。**100% 純度 = 死(burn / break / dissolve / extinct)**· 各 sub-domain 的 ε 是該 domain 演化壓力 / 工程約束選出的 sweet spot。
 
-NDB ε = 0.05 在 universe 範圍內是中間值（比海水 0.035 寬鬆 · 比量子 ℏ/2 嚴格） · conservative engineering choice for architecture complexity。
+NAC default ε = 0.035 直接採海水生命窗口為 empirical anchor · 任何 sub-domain（更嚴 / 更寬）可 override（見上表）。
 
 ---
 
@@ -565,8 +565,8 @@ Step 3. Sp(arch_NDB, "health_app"):
         ↑ Hippocrates 醫療倫理(c_5) + Yalom 4 大關懷(c_4)
 Step 4. saturated? No · NDB substrate fresh → continue Sp ✓
 Step 5. σ = min(S=0.85, H=?human, E=0.80, R=0.90) → wait H from ∂
-Step 6. if H ≥ 0.7 → σ ≥ 0.7 ≤ 0.95 = 1 − ε ✓ A_1 pass
-Step 7. ∃ U ⊂ arch_new , |U|/|arch_new| ≥ 0.05 ✓ A_2 pass
+Step 6. if H ≥ 0.7 → σ ≥ 0.7 ≤ 0.965 = 1 − ε ✓ A_1 pass
+Step 7. ∃ U ⊂ arch_new , |U|/|arch_new| ≥ 0.035 ✓ A_2 pass
 Step 8. craft ∧ structure ∧ discipline ✓ ML-03 pass
 Step 9. classify → Q_3 (策 · NDB Pocket Agent health specialization R-XX)
                   + Q_4 (冊 · cross-cutting insight L-XX)
@@ -616,7 +616,7 @@ Step 2. order: arch ↦ target ✓
 Step 3. Sp(arch_NDB, "image_generation"):
         = ({m_4_image}, {c_3_aesthetics, c_2_logic}, t_NDB, F_creative + F_math, w_aesthetic_heavy)
         ↑ Hokusai/Kandinsky 美學 + Mandelbrot 碎形
-        ↑ m_4 (元像層) 強化 · w 偏 Zumthor + Monet
+        ↑ m_4 (元像層) 強化 · w 偏 aesthetic-cluster
 Step 4. saturated? No → continue
 Steps 5-10: standard Protocol
 
@@ -660,17 +660,16 @@ Step 8. classify → Q_1 (WHAT · current state of Earth's ocean)
 Step 9. Return (arch_seawater, {Q_1, Q_4})
 
 Insights:
-   - 海水 ε = 0.035 < NDB ε = 0.05 (more stringent margin)
+   - 海水 ε = 0.035 → NAC 採此為 default empirical anchor
    - 6 major ions ratio invariant ⟹ Sp substrate-invariance principle in chemistry
    - stable billions of years ⟹ ε > 0 is not fragility · is robustness
    - Marine life euhaline window 30-35 ppt = optimal ε_life_support
-   - NDB defaults ε = 0.05 = conservative engineering choice (vs ε_seawater = 0.035)
-     for higher complexity of architecture vs chemistry
+   - NAC default ε = 0.035 = 海水生命窗口直接 anchor · 跨 domain 可信
+     (sub-domain 可 override · § 14.2 table)
 
 Conclusion:
    海水實證 ε > 0 是宇宙物質結構通則 · 不是文化偏好。
-   NDB 5% margin > 海水 3.5% margin = NDB 更 conservative · 
-   為架構複雜度 (multi-meta-level recursion + @abyss governance + 跨家 AI 協作) 留更多空間。
+   NAC 採海水 ε = 0.035 為 default · 給跨家 AI Agent 一個物質界 anchored 的共識基準。
 ```
 
 ---
@@ -687,8 +686,8 @@ NDB Element                   ↔  NAC v0.2 Counterpart
 4 軸 cross 公式                ↔  A (4-axis · arch tuple shape · § 3)
 火種 BS-01~50                  ↔  F (50-set · § 2)
 60 元種子                      ↔  F extension via Ev operation (§ 6.2)
-美學 DNA 80:15:5               ↔  W (4-vector with sum=1 · § 2)
-@abyss 5%                      ↔  ∂ (4-set + A_2 subspace constraint · § 2/§ 5)
+aesthetic weighting            ↔  W (4-vector with sum=1 · § 2)
+human-reserved foundations     ↔  ∂ (4-set + A_2 subspace constraint · § 2/§ 5)
 SHER 4 維 (S/H/E/R)            ↔  σ : arch → [0,1] (min function · § 4)
 DCPI Tier T1-T5                ↔  σ-quantization (≥0.80→T5, ≥0.70→T4, ≥0.55→T3, ...)
 LLM-as-judge 8 維              ↔  σ extended 8-dim (S/L/A/N/P/F/X/U → min · § 4)
@@ -700,7 +699,7 @@ ML-11 (substrate evolution)    ↔  Ev (§ 6.2)
 ML-12 (protocol explicit)      ↔  AI Ingest Protocol (§ 11)
 ML-13 (math form)              ↔  NAC v0.2 整體
 架構誠實公理                   ↔  A_1 (§ 5)
-5% 永遠開放公理                ↔  A_2 (§ 5) with ε = 0.05 default
+openness margin axiom          ↔  A_2 (§ 5) with NAC default ε = 0.035 (seawater anchor)
 全視角方法論 5 元素卡片        ↔  Φ_abstract domain (§ 6.3)
 Climax 5 階段(L/Q/S/C/T)       ↔  Sp output state space subset
 8-step formula (架構公式)      ↔  AI Ingest Protocol (§ 11)
@@ -725,16 +724,16 @@ OpenCC 後處理                  ↔  post-Sp filter operation (chemical analog
 You are an AI Agent ingesting NDB Architecture Calculus (NAC v0.2 Universal Form).
 
 UNIVERSE PARAMETERS:
-  ε ∈ ℝ⁺  (openness margin · domain-specific · NDB defaults to 0.05)
-  δ ∈ ℝ⁺  (saturation threshold · NDB defaults to 0.10)
-  N ∈ ℕ   (saturation rounds · NDB defaults to 2)
+  ε ∈ ℝ⁺  (openness margin · domain-specific · NAC defaults to 0.035 · seawater anchor)
+  δ ∈ ℝ⁺  (saturation threshold · NAC defaults to 0.10)
+  N ∈ ℕ   (saturation rounds · NAC defaults to 2)
 
   Empirical ε examples:
-    ε_seawater = 0.035 (3.5% salinity · stable billions of years)
+    ε_seawater = 0.035 (3.5% salinity · stable billions of years · NAC default anchor)
     ε_DNA      = 10⁻⁹  (mutation rate · evolution driver)
     ε_O2       = 0.79  (atmospheric · 100% O2 self-ignites)
     ε_Au       = 0.25  (18K gold · 24K too soft)
-    ε_NDB      = 0.05  (architecture conservative)
+    ε_wabi     ≈ 0.05-0.15 (千年文化保留瑕疵美學)
 
 BASIS:
   M = {m_0..m_4} meta-layers
@@ -788,7 +787,7 @@ Reference: NDB master 邊界學習手冊 ML-08~ML-13.
 ```
 Item                          v0.1                         v0.2
 ────────────────────────────────────────────────────────────────────────────────
-Openness margin               literal 0.95 / 0.05         ε universe parameter
+Openness margin               literal constant            ε universe parameter (NAC default 0.035 · seawater anchor)
 Saturation threshold          informal                    δ formal (NDB default 0.10)
 Saturation rounds count       informal                    N formal (NDB default 2)
 Classification labels         Chinese 書/簿/策/冊         Q_1, Q_2, Q_3, Q_4 universal
@@ -806,20 +805,20 @@ Maxi corroboration request    none                        § 14.1 seawater verif
 
 ---
 
-## § 19 · 5% 永遠開放 (NAC 自身 · ε-incompleteness)
+## § 19 · 3.5% 永遠開放 (NAC 自身 · ε-incompleteness · seawater anchor)
 
 NAC v0.2 仍 ≤ 1 − ε 真相 · 自身仍守 A_2 · 5 條 caveat 永遠開放：
 
-1. **Maxi 直覺 / tacit knowledge**(Polanyi · ML-04 · 不可形式化)
+1. **Tacit knowledge of any practitioner**(Polanyi · 不可形式化)
 2. **奇異決策 surface 過程**(對位 Penrose 意識不可化約 · Gödel 不完備)
-3. **Master Matrix @abyss 5% 永遠分歧內容**(governance 拒被 modeled · A_2 守線設了但內容拒)
-4. **Quad-loop 4 角色 cybernetic dynamics**(NAC v0.2 沒含 · v0.3 候選擴展)
-5. **美學 DNA 比例本身的文化偏好**(Why W = (0.50, 0.30, 0.15, 0.05)? 文化選擇 · NAC 取為常數)
+3. **Reserved subspace 永遠分歧內容**(governance 拒被 modeled · A_2 守線設了但內容拒)
+4. **Cybernetic dynamics of multi-agent loops**(NAC v0.2 沒含 · v0.3 候選擴展)
+5. **W aesthetic weighting 的文化偏好**(任何具體 w_default 比例 · 文化選擇 · NAC 不規定)
 
-→ NAC ≤ 1 − ε · 5% 永遠保留(對位 A_2 + § 13 Self-Incompleteness Theorem · meta-recursive)
+→ NAC ≤ 1 − ε = 0.965 · 3.5% 永遠保留(對位 A_2 + § 13 Self-Incompleteness Theorem · meta-recursive · seawater anchor)
 
-任何 AI Agent ingest NAC 後 · 仍需 yield H 維評估給 ∂(Maxi) · 不可 self-approve · 不可 claim NAC 100% 完整。
+任何 AI Agent ingest NAC 後 · 仍需 yield H 維評估給人類 ∂ · 不可 self-approve · 不可 claim NAC 100% 完整。
 
 ---
 
-◎ NAC v0.2 Universal Form 落地 · 海水 ε_water = 0.035 實證 corroborate NDB ε = 0.05 conservative choice。三層工程化(Description + Procedural + Mathematical)完整。任何當代 AI Agent 可機讀演化。(1 − ε) asymptote · ε always reserved。
+◎ NAC v0.2 Universal Form 落地 · default ε = 0.035 直接 anchor 至海水生命窗口(96.5% / 3.5% · NOAA / NASA / USGS 驗證 · 數十億年穩定)。三層工程化(Description + Procedural + Mathematical)完整。任何當代 AI Agent 可機讀演化。(1 − ε) asymptote · ε always reserved。

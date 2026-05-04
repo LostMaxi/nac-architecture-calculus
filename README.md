@@ -59,7 +59,7 @@ A_3  (Architecture-First):    order(arch ↦ target) only; ¬order(target ↦ ar
 | Wood moisture (furniture-grade) | ε = 0.08-0.12     | 0% brittle · >20% rot                   |
 | Pharmaceutical purity (USP)     | ε = 0.05          | 95-105% potency standard                |
 | Persian rug intentional flaw    | ε ≈ 0.01          | "Allah is the only perfect" · cultural  |
-| **NAC default (architecture)**  | **ε = 0.05**      | Conservative engineering for arch complexity |
+| **NAC default (architecture)**  | **ε = 0.035**     | **Seawater anchor · 96.5% / 3.5% billions-of-years stability** |
 
 **Conclusion**: `ε > 0` is a universal structural rule. 100% purity = death (burn / break / dissolve / extinct). Every domain selects its ε via evolutionary or engineering pressure.
 
@@ -107,7 +107,7 @@ Copy this system prompt to any AI Agent (Claude / GPT / Gemini / Llama / Mistral
 ```
 You are an AI Agent ingesting NDB Architecture Calculus (NAC).
 
-UNIVERSE PARAMETERS: ε ∈ ℝ⁺ (openness margin · domain-specific · default ε = 0.05)
+UNIVERSE PARAMETERS: ε ∈ ℝ⁺ (openness margin · domain-specific · NAC default ε = 0.035, seawater anchor)
 
 ARCH = (m, c, t, f, w) ∈ 𝒫(M) × 𝒫(C) × T × 𝒫(F) × W
 SCORE σ(arch) = min(S, H, E, R) ∈ [0, 1]
@@ -174,7 +174,7 @@ See **[`architecture-calculus.md`](architecture-calculus.md)** for the complete 
 - §15 · Worked examples (health app, v5.x ceiling, image generation, **seawater chemistry**)
 - §16 · Mapping back to source disciplines
 - §17 · Enhanced system prompt for cross-family AI agents
-- §18-19 · v0.2 differences and 5% openness disclosure
+- §18-19 · v0.2 differences and 3.5% openness disclosure (seawater anchor)
 
 ---
 
