@@ -40,7 +40,7 @@ graph TB
     SCORE --> E[E · Evolutionary plasticity]
     SCORE --> R[R · Relevance]
 
-    classDef reserved fill:#fcf,stroke:#a0a,stroke-width:2px
+    classDef reserved fill:#7a3d7a,stroke:#cc88cc,stroke-width:3px,color:#ffffff
     class AB,H reserved
 ```
 
