@@ -40,7 +40,7 @@ graph TB
     SCORE --> E[E · Evolutionary plasticity]
     SCORE --> R[R · Relevance]
 
-    classDef reserved fill:#7a3d7a,stroke:#cc88cc,stroke-width:3px,color:#ffffff
+    classDef reserved fill:#5a3d7a,stroke:#cc88dd,stroke-width:2px,color:#ffffff
     class AB,H reserved
 ```
 
@@ -100,9 +100,9 @@ flowchart TD
     S9 --> S10[10 · return arch_new, q]
     S10 --> End([viable arch* delivered])
 
-    classDef stop fill:#fcc,stroke:#900
+    classDef stop fill:#3d1f5c,stroke:#a060c0,stroke-width:3px,color:#dfceea
     class Stop1,Stop2,Stop3,Stop4,Stop5 stop
-    classDef pass fill:#cfc,stroke:#090
+    classDef pass fill:#7a4da0,stroke:#a78bfa,stroke-width:3px,color:#ffffff
     class End pass
 ```
 
@@ -174,7 +174,7 @@ graph LR
     Wood -.-> Gold
     Gold -.larger ε.-> O2
 
-    classDef verified fill:#cdf,stroke:#06c,stroke-width:2px
+    classDef verified fill:#9d6ec5,stroke:#dfceea,stroke-width:3px,color:#ffffff
     class Sea,O2,Gold,DNA,Q verified
 ```
 
@@ -206,7 +206,7 @@ graph TB
     L2 -->|formalize into calculus| L3
     L3 -.->|self-reference via § 13| L3_meta((Self-Incompleteness<br/>NAC ε-incomplete))
 
-    classDef richest fill:#cfc,stroke:#090,stroke-width:3px
+    classDef richest fill:#9d6ec5,stroke:#dfceea,stroke-width:3px,color:#ffffff
     class L3 richest
 ```
 
@@ -232,9 +232,9 @@ graph TB
     Theorem -.->|next release| NAC_v_next([NAC_v+1])
     NAC_v_next -.-|same theorem still holds| Theorem
 
-    classDef axiom fill:#ffc,stroke:#a90
+    classDef axiom fill:#5a3d7a,stroke:#cc88dd,stroke-width:2px,color:#ffffff
     class Open axiom
-    classDef self fill:#fcc,stroke:#a00,stroke-width:3px
+    classDef self fill:#3d1f5c,stroke:#a060c0,stroke-width:3px,color:#dfceea
     class Theorem self
 ```
 
@@ -277,9 +277,9 @@ graph LR
     BC4 --> Board44[Worked Examples · § 15]
     BC4 --> Board45[System Prompt for AI · § 17]
 
-    classDef platform fill:#cdf,stroke:#06c,stroke-width:3px
+    classDef platform fill:#9d6ec5,stroke:#dfceea,stroke-width:3px,color:#ffffff
     class PLATFORM platform
-    classDef bc fill:#ffd,stroke:#a90,stroke-width:2px
+    classDef bc fill:#5a3d7a,stroke:#cc88dd,stroke-width:2px,color:#ffffff
     class BC1,BC2,BC3,BC4 bc
 ```
 
