@@ -171,6 +171,29 @@ See **[`visuals.md`](visuals.md)** — GitHub-native Mermaid diagrams covering b
 
 ---
 
+## Python Toolkit · `nac-calculus`
+
+A signature-only Python implementation of the public-interface axioms is available in [`python/`](python/) — verify any architecture against A_1 / A_2 / A_3, compute `partial_viability()`, and assert `Self-Incompleteness`. **Deployment internals are deliberately omitted from the toolkit** (per § 16). 18 unit tests pass; the Sagrada Família case study from § 25 runs end-to-end as `python examples/sagrada.py`.
+
+```python
+from nac import SHER, Architecture, check_all_axioms, partial_viability
+
+arch = Architecture(
+    name="my_system",
+    sher=SHER(S=0.85, H=0.7, E=0.8, R=0.9),  # H must be human-judged
+    epsilon=0.035,                            # NAC default · seawater anchor
+    arch_first_ordering=True,
+    has_unmodeled_subspace=True,
+)
+for r in check_all_axioms(arch):
+    print(r)
+print(f"Partial Viability: {partial_viability(arch):.4f}")
+```
+
+See [`python/README.md`](python/README.md) for full API.
+
+---
+
 ## Full Specification
 
 See **[`architecture-calculus.md`](architecture-calculus.md)** for the public spec (signatures · axioms · operations · empirical anchor · prior art lineage).
